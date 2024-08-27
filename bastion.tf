@@ -35,7 +35,7 @@ EOF
 resource "aws_iam_instance_profile" "bastion_iam_profile" {
   count = var.private ? 1 : 0
 
-  name = "bastion-ec2_profile"
+  name = "${var.cluster_name}-bastion"
   role = aws_iam_role.bastion_iam_role[0].name
 }
 
