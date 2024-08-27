@@ -14,9 +14,9 @@ variable "bastion_public_ssh_key" {
 }
 
 variable "bastion_public_ip" {
-  description = "Should the Bastion have a public ip?"
-  type = bool
-  default = false
+  description = "Should the Bastion have a public ip?  Valid only if the 'private' variable is set to 'true'."
+  type        = bool
+  default     = false
 }
 
 variable "region" {
